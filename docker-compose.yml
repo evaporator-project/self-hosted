@@ -1,0 +1,11 @@
+# yaml 配置实例
+version: '3'
+services:
+  evaporator:
+    image: zhangtao25/evaporator:main
+    restart: always
+    container_name: evaporator-project
+    ports:
+      - 28000:8080
+    volumes:
+      - ./conf/application.yml:/usr/src/app/conf/application.yml
